@@ -1,0 +1,19 @@
+group 'EpochTime'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+def rhinoGroup   = 'rhino'
+def rhinoName    = 'js'
+def rhinoVersion = '1.7R2'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group: rhinoGroup, name: rhinoName, version: rhinoVersion
+}
